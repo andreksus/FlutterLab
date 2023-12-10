@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/pages/tabs.dart';
+import 'package:flutter_lab/sections/header/tabs.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainPage extends StatelessWidget {

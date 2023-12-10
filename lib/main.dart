@@ -22,8 +22,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Header(),
+    return Scaffold(
+        body: 
+          ListView(
+          children: const [Header()],
+          //Header(),
+        )
     );
   }
 }

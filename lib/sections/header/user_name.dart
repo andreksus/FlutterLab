@@ -10,7 +10,7 @@ class UserName extends StatelessWidget {
       margin: const EdgeInsets.only(top: 36, bottom: 14),
       child: Text(
       userName,
-      style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
+      style: const TextStyle(fontFamily: 'SFProText', fontSize: 24, fontWeight: FontWeight.bold),
       )
     );
   }

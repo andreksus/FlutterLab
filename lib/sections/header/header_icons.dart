@@ -6,26 +6,24 @@ class HeaderIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.only(top: 44),
-        child: Row(
-          children: [
-            Container(
-                margin: const EdgeInsets.only(left: 14, top: 8, bottom: 8),
-                child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      'assets/icons/ic_24_cross.svg',
-                    ))),
-            const Spacer(),
-            Container(
-                margin: const EdgeInsets.only(right: 14, top: 8, bottom: 8),
-                child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      'assets/icons/ic_24_arrow_right_square.svg',
-                    ))),
-          ],
-        ));
+    return Row(
+      children: [
+        Container(
+            margin: const EdgeInsets.only(left: 14, top: 8, bottom: 8),
+            child: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  'assets/icons/ic_24_cross.svg',
+                ))),
+        const Spacer(),
+        Container(
+            margin: const EdgeInsets.only(right: 14, top: 8, bottom: 8),
+            child: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  'assets/icons/ic_24_arrow_right_square.svg',
+                ))),
+      ],
+    );
   }
 }
