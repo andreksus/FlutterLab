@@ -9,7 +9,7 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        margin: const EdgeInsets.only(left: 16, top: 8),
+          margin: const EdgeInsets.only(left: 16, top: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Colors.white,
@@ -29,7 +29,7 @@ class CardWidget extends StatelessWidget {
                   width: 220,
                   child: Row(
                     children: [
-                      Image.asset("assets/images/sber_prime.png", height: 36),
+                      Image.asset(card.icon, height: 36),
                       Container(
                         margin: const EdgeInsets.only(left: 12),
                         child: Text(
@@ -74,4 +74,3 @@ class CardWidget extends StatelessWidget {
     );
   }
 }
-

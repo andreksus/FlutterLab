@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lab/model/body_title.dart';
 
 class BodyTitle extends StatelessWidget {
-  const BodyTitle({super.key});
+  final BodyTitleClass bodyTitle;
+  const BodyTitle({super.key, required this.bodyTitle});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(top: 16, bottom: 8),
+        margin: EdgeInsets.only(top: bodyTitle.topPadding, bottom: 8),
         padding:
             const EdgeInsets.only(top: 14, bottom: 12, left: 16, right: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("У вас подключено",
-                style: TextStyle(
+            Text(bodyTitle.title,
+                style: const TextStyle(
                     fontFamily: "SFProText",
                     fontWeight: FontWeight.bold,
                     fontSize: 20)),
-            Text("Подписки, автоплатежи и сервисы на которые вы подписались",
+            Text(bodyTitle.description,
                 style: TextStyle(
                     fontFamily: "SFProText",
                     fontWeight: FontWeight.normal,
