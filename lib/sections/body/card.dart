@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/model/card.dart';
+import 'package:flutter_lab/model/card_class.dart';
 
 class CardWidget extends StatelessWidget {
   final CardClass card;

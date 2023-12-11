@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/model/body_title.dart';
+import 'package:flutter_lab/model/body_title_class.dart';
 
 class BodyTitle extends StatelessWidget {
   final BodyTitleClass bodyTitle;

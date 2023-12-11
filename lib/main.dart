@@ -26,7 +26,6 @@ class App extends StatelessWidget {
     return Scaffold(
         body: ListView(
       children: const [Header(), Body()],
-      //Header(),
     ));
   }
 }

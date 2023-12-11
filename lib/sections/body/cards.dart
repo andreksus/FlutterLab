@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/model/card.dart';
+import 'package:flutter_lab/model/card_class.dart';
 import 'package:flutter_lab/sections/body/card.dart';
 
 List<CardClass> list = [card1, card2];
