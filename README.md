@@ -1,16 +1,18 @@
 # flutter_lab
 
 A new Flutter project.
+![](/assets//images/pic.jpg)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+sdk: '>=3.2.2 <4.0.0'
 
-A few resources to get you started if this is your first Flutter project:
+dependencies:
+  flutter:
+    sdk: flutter
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.9
