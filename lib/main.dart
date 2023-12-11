@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_lab/model/body_title.dart';
-import 'package:flutter_lab/sections/body/body_title.dart';
-import 'package:flutter_lab/sections/body/card.dart';
-import 'package:flutter_lab/sections/body/cards.dart';
+import 'package:flutter_lab/sections/body/body.dart';
 import 'package:flutter_lab/sections/header/header.dart';
 
 void main() {
@@ -29,7 +25,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
-      children: [const Header(), BodyTitle(bodyTitle: firstBodyTitle), const CardsWidget()],
+      children: const [Header(), Body()],
       //Header(),
     ));
   }
