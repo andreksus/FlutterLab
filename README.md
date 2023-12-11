@@ -16,3 +16,5 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.9
+
+  Дополнительно устанавливал пак для работы с svg иконками
