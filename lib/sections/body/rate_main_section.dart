@@ -13,10 +13,15 @@ class RateMainSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          rateLimit.description == null ?
           Text(rateLimit.title,
           style: const TextStyle(fontFamily: 'SFProText', fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-          Text(rateLimit.description,
+          ) :
+          Text(rateLimit.title,
+          style: const TextStyle(fontFamily: 'SFProText', fontSize: 16, fontWeight: FontWeight.bold),
+          ) 
+          ,
+          Text(rateLimit.description.toString(),
           style: const TextStyle(fontFamily: 'SFProText', fontSize: 14, fontWeight: FontWeight.normal),
           )
         ],
