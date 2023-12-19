@@ -17,10 +17,11 @@ class Header extends StatelessWidget {
           children: [
             ProfileImage(refImage: "assets/images/Photo.png"),
             UserName(userName: "Екатерина"),
-            Tabs()
+            //Tabs()
           ],
         )
       ],
     );
   }
 }
+

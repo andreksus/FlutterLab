@@ -1,53 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab/sections/header/tabs.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_lab/sections/body/body.dart';
+import 'package:flutter_lab/sections/header/header.dart';
 
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+/// Flutter code sample for [NestedScrollView].
+class NestedScrollViewExample extends StatelessWidget {
+  const NestedScrollViewExample({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Container(
-            margin: const EdgeInsets.only(left: 14, top: 8, bottom: 8),
-            alignment: Alignment.center,
-            child: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                'assets/icons/ic_24_cross.svg',
-              ),
-            )),
-        actions: [
-          Container(
-              width: 37,
-              margin: const EdgeInsets.only(right: 14, top: 8, bottom: 8),
-              alignment: Alignment.center,
-              child: IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  'assets/icons/ic_24_arrow_right_square.svg',
+    final List<String> tabs = <String>['Профиль', 'Настройки'];
+    return Container(
+      alignment: AlignmentDirectional.topCenter,
+      margin: const EdgeInsets.only(top: 30),
+      child: DefaultTabController(
+        length: tabs.length, // This is the number of tabs.
+        child: Scaffold(
+          body: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                SliverOverlapAbsorber(
+                  handle:
+                      NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                  sliver: SliverAppBar(
+                    pinned: true,
+                    expandedHeight: 280.0,
+                    flexibleSpace: const FlexibleSpaceBar(
+                      background: Header(),
+                    ),
+                    forceElevated: innerBoxIsScrolled,
+                    bottom: TabBar(
+                      indicatorWeight: 1.0,
+                      indicatorPadding: EdgeInsets.zero,
+                      labelColor: const Color(0xff000000),
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicatorColor: const Color(0xff068441),
+                      tabs: tabs.map((String name) => Tab(text: name)).toList(),
+                    ),
+                  ),
                 ),
-              ))
-        ],
-      ),
-      body: Column(
-        children: [
-          Container(
-            alignment: Alignment.center,
-            child: Image.asset(
-              'assets/images/Photo.png',
-              height: 140,
+              ];
+            },
+            body: TabBarView(
+              children: tabs.map((String name) {
+                return SafeArea(
+                  top: false,
+                  bottom: false,
+                  child: Builder(
+                    builder: (BuildContext context) {
+                      if (name == "Профиль") {
+                        return ListView(
+                          children: const [Body()],
+                        );
+                      } else {
+                        return Container();
+                      }
+                    },
+                  ),
+                );
+              }).toList(),
             ),
           ),
-          Container(
-              margin: const EdgeInsets.only(top: 36, bottom: 14),
-              child: const Text(
-                "Екатерина",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
-              )),
-          const Tabs()
-        ],
+        ),
       ),
     );
   }

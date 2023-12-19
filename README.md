@@ -2,6 +2,8 @@
 
 A new Flutter project.
 ![](/assets//images/pic.jpg)
+![](/assets//images/pic2.jpg)
+![](/assets//images/pic3.jpg)
 
 ## Getting Started
 
