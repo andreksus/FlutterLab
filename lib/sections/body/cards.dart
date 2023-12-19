@@ -13,7 +13,7 @@ class CardsWidget extends StatelessWidget {
         height: 150,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 2,
+            itemCount: list.length,
             itemBuilder: (context, index) {
               return CardWidget(card: list[index]);
             }));

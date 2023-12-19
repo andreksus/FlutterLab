@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lab/sections/header/header_icons.dart';
 import 'package:flutter_lab/sections/header/profile_image.dart';
-import 'package:flutter_lab/sections/header/tabs.dart';
 import 'package:flutter_lab/sections/header/user_name.dart';
 
 class Header extends StatelessWidget {
